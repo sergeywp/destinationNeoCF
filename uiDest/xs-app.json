@@ -1,0 +1,18 @@
+{
+  "welcomeFile": "/uiDest/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/uiDest/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    },{
+    	"source": "^/xsapp",
+    	"target": "/",
+    	"destination": "xsapp"
+    }
+  ]
+}

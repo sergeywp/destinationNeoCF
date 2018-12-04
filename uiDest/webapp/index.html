@@ -1,0 +1,42 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="angularData">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Node/Angular data App</title>
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+
+	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
+	<script src="js/services/data.js"></script> <!-- load our data service -->
+	<script src="js/core.js"></script> <!-- load our main application -->
+
+</head>
+<!-- SET THE CONTROLLER -->
+<body ng-controller="mainController">
+	<div>Data from Hana:</div>
+	<table>
+	  <tr ng-repeat="entity in data">
+	    <td>{{ entity.step }}</td>
+	    <td>{{ entity.state }}</td>
+	    <td>{{ entity.detalNum }}</td>
+		<td>{{ entity.height }}</td>
+		<td>{{ entity.step }}</td>
+		<td>{{ entity.kone }}</td>
+		<td>{{ entity.angel }}</td>
+	  </tr>
+	</table>
+	
+	<!--<div class="container">-->
+	<!--	INDEX.HTML-->
+	<!--	<div class="checkbox" ng-repeat="entity in data">-->
+	<!--		{{ entity.step }}-->
+	<!--	</div>-->
+		
+	<!--</div>-->
+</body>
+</html>

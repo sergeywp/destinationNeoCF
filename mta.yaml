@@ -1,0 +1,36 @@
+ID: destTest
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: uiDest
+   type: html5
+   path: uiDest
+   parameters:
+      disk-quota: 256M
+      memory: 256M
+   build-parameters:
+      builder: grunt
+   requires:
+    - name: uaa_destTest
+    - name: dest_destTest
+
+ 
+
+
+ 
+
+resources:
+ - name: uaa_destTest
+   parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+   type: org.cloudfoundry.managed-service
+
+ - name: dest_destTest
+   parameters:
+      service-plan: lite
+      service: destination
+   type: org.cloudfoundry.managed-service
+
