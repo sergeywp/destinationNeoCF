@@ -7,6 +7,6 @@ angular.module('dataController', [])
 
 		Data.get()
 			.success(function(data) {
-				$scope.data = data.d.results;
+				$scope.data = data;
 			});
 	}]);
